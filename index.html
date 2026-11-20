@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SanBong Cloud — Đặt sân online & vận hành sân thể thao</title>
+  <meta name="description" content="SanBong Cloud: website và app quản lý sân bóng, pickleball, bóng rổ, quần vợt. Khách đặt sân online, bạn vận hành mọi thứ từ một nơi.">
+  <meta name="theme-color" content="#060d18">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="SanBong Cloud — Giải pháp số cho doanh nghiệp thể thao">
+  <meta property="og:description" content="Website & app đặt sân, quản lý nhân viên và vận hành sân bóng, pickleball, bóng rổ, quần vợt.">
+  <meta property="og:url" content="https://sanbong.cloud/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SanBong Cloud">
+  <meta property="og:image" content="https://sanbong.cloud/og-image.jpg">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SanBong Cloud — Giải pháp số cho doanh nghiệp thể thao">
+  <meta name="twitter:description" content="Website & app đặt sân, quản lý nhân viên và vận hành sân bóng, pickleball, bóng rổ, quần vợt.">
+  <meta name="twitter:image" content="https://sanbong.cloud/og-image.jpg">
+  <link rel="canonical" href="https://sanbong.cloud/">
+  <link rel="icon" href="/logo-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/logo-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scrollcraft.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#act-empty">Bỏ qua đến bảng đặt sân</a>
+  <span data-sc-progress></span>
+  <div class="sc-grain" aria-hidden="true"></div>
+
+  <header class="app-chrome" role="banner">
+    <a class="app-chrome__brand" href="#act-empty" aria-label="SanBong Cloud">
+      <img src="/logo-icon.svg" alt="" width="28" height="28" decoding="async">
+      <span>SanBong<em>.Cloud</em></span>
+    </a>
+    <nav class="app-chrome__tabs" aria-label="Bảng điều khiển">
+      <a href="#act-empty">Lịch trống</a>
+      <a href="#act-relief">Trạng thái</a>
+      <a href="#act-rush">Giờ cao điểm</a>
+      <a href="#act-sports">Môn</a>
+      <a href="#act-ops">Vận hành</a>
+      <a href="#act-join">Mở ca</a>
+    </nav>
+    <p class="app-chrome__status"><i aria-hidden="true"></i> Demo kịch bản · mẫu</p>
+  </header>
+
+  <main id="top">
+
+    <!-- 1 · UNEASE: empty night board -->
+    <section id="act-empty" data-sc-act="pin" data-sc-span="1.55" data-sc-drift="#060d18">
+      <div data-sc-stage>
+        <div class="surface">
+          <div class="surface__bar">
+            <h1 class="surface__title">Lịch đặt sân · Tối nay</h1>
+            <p class="surface__meta">Thứ Bảy · 3 sân</p>
+            <span class="surface__pill" id="empty-pill" data-state="wait">Chờ khách gọi</span>
+          </div>
+          <div class="surface__panel">
+            <div class="board" data-board role="grid" aria-label="Bảng lịch sân trống"></div>
+          </div>
+          <p class="surface__toast" data-sc-cue="0.05">
+            <strong>17:00.</strong> Quầy im. Điện thoại sẽ đổ chuông khi khách muốn đá.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · RELIEF: status idiom -->
+    <section id="act-relief" class="sc-section" data-sc-act="flow" data-sc-drift="#0a1628">
+      <div class="status-stage sc-wrap">
+        <div class="status-card" data-sc-reveal="up" data-sc-reveal-at="0.12 0.55">
+          <div class="status-card__row">
+            <p class="sc-label">Trạng thái hệ thống</p>
+            <p class="sc-label">sanbong.cloud</p>
+          </div>
+          <p class="status-line status-line--soft" data-sc-in>Trước đây: trả lời từng cuộc gọi.</p>
+          <p class="status-line" data-sc-in>Bây giờ: lịch nhận đặt 24/7.</p>
+          <p class="status-note" data-sc-in>
+            Website thương mại + app vận hành cho sân bóng, pickleball, bóng rổ, quần vợt, cầu lông.
+            Khách đặt online. Bạn giữ quyền kiểm soát.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · PEAK: Scroll Clock -->
+    <section id="act-rush" data-sc-act="pin" data-sc-span="3.4" data-sc-drift="#060d18">
+      <div data-sc-stage>
+        <div class="surface">
+          <div class="surface__bar">
+            <h2 class="surface__title">Giờ cao điểm</h2>
+            <p class="surface__meta">Cuộn = đồng hồ đêm</p>
+            <div class="clock-face" aria-live="polite">
+              <span id="scroll-clock">17:00</span>
+              <small id="scroll-clock-sub">Chưa có đặt</small>
+            </div>
+            <span class="surface__pill" id="rush-pill" data-state="wait">Chờ khách gọi</span>
+          </div>
+          <div class="surface__panel">
+            <div class="board" data-board role="grid" aria-label="Bảng lịch giờ cao điểm"></div>
+          </div>
+          <p class="surface__toast" id="rush-toast">
+            <strong>Demo kịch bản</strong> — cuộn để đồng hồ đêm chạy và lịch tự lấp đầy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · RANGE: sports pan -->
+    <section id="act-sports" data-sc-act="pan" data-sc-span="4.4" data-sc-drift="#0a1628">
+      <div data-sc-stage>
+        <div class="rail" data-sc-pan="0.08">
+          <div class="rail__lead">
+            <p class="sc-label">Danh mục sân</p>
+            <h2>Một hệ thống. Nhiều môn.</h2>
+            <p>Template và lịch đã tối ưu theo từng loại hình. Triển khai nhanh, gắn thương hiệu của bạn.</p>
+          </div>
+          <article class="venue">
+            <p class="venue__code">SB-01</p>
+            <h3>Bóng đá</h3>
+            <p>Sân 5, 7, 11. Đặt theo khung giờ, sân con và giải đấu.</p>
+            <div class="venue__spec"><span>Slot</span><strong>60–90 phút</strong></div>
+          </article>
+          <article class="venue">
+            <p class="venue__code">PB-02</p>
+            <h3>Pickleball</h3>
+            <p>Theo giờ, combo thuê vợt, hội viên tháng.</p>
+            <div class="venue__spec"><span>Gói</span><strong>Drop-in / tháng</strong></div>
+          </article>
+          <article class="venue">
+            <p class="venue__code">BB-03</p>
+            <h3>Bóng rổ</h3>
+            <p>Trong nhà và ngoài trời. Theo sân hoặc full court.</p>
+            <div class="venue__spec"><span>Chế độ</span><strong>Half / Full</strong></div>
+          </article>
+          <article class="venue">
+            <p class="venue__code">TN-04</p>
+            <h3>Quần vợt</h3>
+            <p>Sân cứng, đất nện. Hội viên và khách vãng lai.</p>
+            <div class="venue__spec"><span>Bề mặt</span><strong>Hard / Clay</strong></div>
+          </article>
+          <article class="venue">
+            <p class="venue__code">BD-05</p>
+            <h3>Cầu lông</h3>
+            <p>Slot 60–90 phút, quản lý dụng cụ cho thuê.</p>
+            <div class="venue__spec"><span>Thuê</span><strong>Vợt / cầu</strong></div>
+          </article>
+          <article class="venue">
+            <p class="venue__code">XX-06</p>
+            <h3>Môn khác</h3>
+            <p>Futsal, padel, bóng chuyền. Tùy biến theo yêu cầu.</p>
+            <div class="venue__spec"><span>Setup</span><strong>Custom</strong></div>
+          </article>
+          <p class="rail__end">Hết danh mục. Tiếp theo: bảng vận hành.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · SUBSTANCE: ops panels -->
+    <section id="act-ops" class="sc-section" data-sc-act="flow" data-sc-drift="#060d18">
+      <div class="sc-wrap ops">
+        <div class="ops__head" data-sc-in data-sc-stagger="70">
+          <p class="sc-label">Bảng vận hành</p>
+          <h2>Số liệu từ ca demo</h2>
+          <p>Các con số dưới đây tính từ kịch bản mẫu trên trang, không phải thống kê marketing bịa.</p>
+        </div>
+        <div class="ops__grid" data-sc-in data-sc-stagger="90">
+          <article class="op-panel">
+            <p class="op-panel__label">Doanh thu ca demo</p>
+            <p class="op-panel__value"><span data-sc-count="0 12400000">0</span><span>₫</span></p>
+            <div class="bars" aria-hidden="true">
+              <i style="--h:45%"></i><i style="--h:70%"></i><i style="--h:55%"></i>
+              <i style="--h:90%"></i><i style="--h:65%"></i><i style="--h:80%"></i>
+            </div>
+            <p>6 khung giờ · 3 sân · dữ liệu mẫu tối nay.</p>
+          </article>
+          <article class="op-panel">
+            <p class="op-panel__label">Lấp đầy lịch</p>
+            <p class="op-panel__value"><span data-sc-count="0 18">0</span><span>/24</span></p>
+            <p>Ô đã đặt trên bảng giờ cao điểm sau khi cuộn hết act.</p>
+            <p class="demo-note">SAMPLE · không phải KPI khách hàng</p>
+          </article>
+          <article class="op-panel">
+            <p class="op-panel__label">Ca nhân viên</p>
+            <ul class="staff-list">
+              <li><span>Minh · Quầy</span><em>On</em></li>
+              <li><span>Lan · Kỹ thuật</span><em>On</em></li>
+              <li><span>Huy · Bảo vệ</span><em>Standby</em></li>
+            </ul>
+            <p class="demo-note">Phân ca trong app quản lý</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · RESOLVE: real form input -->
+    <section id="act-join" data-sc-act="pin" data-sc-span="1.35" data-sc-drift="#060d18">
+      <div data-sc-stage>
+        <div class="close-stage">
+          <div class="close-card" data-sc-cue="0">
+            <div class="close-card__head">
+              <h2>Mở ca tư vấn</h2>
+              <p class="sc-label">Phản hồi trong 24 giờ</p>
+            </div>
+            <form class="close-form" action="/api/contact" method="post" novalidate>
+              <label class="hp" aria-hidden="true">
+                <span>Để trống</span>
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              </label>
+              <label>
+                <span>Họ và tên</span>
+                <input type="text" name="name" placeholder="Nguyễn Văn A" required autocomplete="name" >
+              </label>
+              <label>
+                <span>Số điện thoại / Zalo</span>
+                <input type="tel" name="phone" placeholder="090x xxx xxx" required autocomplete="tel">
+              </label>
+              <label>
+                <span>Loại hình sân</span>
+                <select name="sport" required>
+                  <option value="" disabled selected hidden>Chọn môn</option>
+                  <option value="bong-da">Sân bóng đá</option>
+                  <option value="pickleball">Pickleball</option>
+                  <option value="bong-ro">Bóng rổ</option>
+                  <option value="quan-vot">Quần vợt</option>
+                  <option value="cau-long">Cầu lông</option>
+                  <option value="khac">Khác</option>
+                </select>
+              </label>
+              <label>
+                <span>Nhu cầu</span>
+                <select name="need" required>
+                  <option value="" disabled selected hidden>Chọn nhu cầu</option>
+                  <option value="website">Website thương mại</option>
+                  <option value="app">App quản lý sân</option>
+                  <option value="both">Cả website &amp; app</option>
+                </select>
+              </label>
+              <label class="full">
+                <span>Ghi chú</span>
+                <textarea name="message" rows="2" placeholder="Số sân, địa điểm, yêu cầu đặc biệt…"></textarea>
+              </label>
+              <button type="submit">Tư vấn miễn phí</button>
+              <p class="form-note" role="status" aria-live="polite"></p>
+            </form>
+            <div class="close-foot">
+              <a href="mailto:dichvu@sanbong.cloud">dichvu@sanbong.cloud</a>
+              <span>© 2026 SanBong Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="scrollcraft.js"></script>
+  <script>ScrollCraft.mount(document.body);</script>
+  <script src="script.js"></script>
+</body>
+</html>

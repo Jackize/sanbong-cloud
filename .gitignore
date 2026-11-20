@@ -1,0 +1,6 @@
+.env
+data/
+**/node_modules/
+scrollcraft/builds/*/lab/
+*.log
+.DS_Store
