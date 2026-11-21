@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>SanBong Cloud — Đặt sân online & vận hành sân thể thao</title>
+  <title>SanBong Cloud: Đặt sân online & vận hành sân thể thao</title>
   <meta name="description" content="SanBong Cloud: website và app quản lý sân bóng, pickleball, bóng rổ, quần vợt. Khách đặt sân online, bạn vận hành mọi thứ từ một nơi.">
   <meta name="theme-color" content="#060d18">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="SanBong Cloud — Giải pháp số cho doanh nghiệp thể thao">
+  <meta property="og:title" content="SanBong Cloud: Giải pháp số cho doanh nghiệp thể thao">
   <meta property="og:description" content="Website & app đặt sân, quản lý nhân viên và vận hành sân bóng, pickleball, bóng rổ, quần vợt.">
   <meta property="og:url" content="https://sanbong.cloud/">
   <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://sanbong.cloud/og-image.jpg">
   <meta property="og:locale" content="vi_VN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SanBong Cloud — Giải pháp số cho doanh nghiệp thể thao">
+  <meta name="twitter:title" content="SanBong Cloud: Giải pháp số cho doanh nghiệp thể thao">
   <meta name="twitter:description" content="Website & app đặt sân, quản lý nhân viên và vận hành sân bóng, pickleball, bóng rổ, quần vợt.">
   <meta name="twitter:image" content="https://sanbong.cloud/og-image.jpg">
   <link rel="canonical" href="https://sanbong.cloud/">
@@ -30,10 +30,32 @@
 <body>
   <a class="skip" href="#act-empty">Bỏ qua đến bảng đặt sân</a>
   <span data-sc-progress></span>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-football" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 7.5l4 2.9-1.5 4.7h-5L8 10.4z"/><path d="M12 3v4.5M16 10.4l4.3-1.4M14.5 15.1l2.7 3.7M9.5 15.1l-2.7 3.7M8 10.4L3.7 9"/>
+      </symbol>
+      <symbol id="i-pickleball" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5.2 13.6a5.5 5.5 0 1 1 6.2 1.1l-2.1 2.1-3.2-3.2z"/><path d="M7.7 15.3l-4 4"/><circle cx="18.5" cy="18.5" r="2.5"/>
+      </symbol>
+      <symbol id="i-basketball" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6a9 9 0 0 1 2.4 6.4 9 9 0 0 1-2.4 6.4M18.4 5.6a9 9 0 0 0-2.4 6.4 9 9 0 0 0 2.4 6.4"/>
+      </symbol>
+      <symbol id="i-tennis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M5.5 5.8a9 9 0 0 1 0 12.4M18.5 5.8a9 9 0 0 0 0 12.4"/>
+      </symbol>
+      <symbol id="i-badminton" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.5 15.5L5 5h14l-4.5 10.5"/><path d="M10 5l1 10.5M14 5l-1 10.5"/><path d="M9.5 15.5h5v1a2.5 2.5 0 0 1-5 0z"/>
+      </symbol>
+      <symbol id="i-other" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><path d="M17 14v6M14 17h6"/>
+      </symbol>
+    </defs>
+  </svg>
   <div class="sc-grain" aria-hidden="true"></div>
 
   <header class="app-chrome" role="banner">
-    <a class="app-chrome__brand" href="#act-empty" aria-label="SanBong Cloud">
+    <a class="app-chrome__brand" href="#hero" aria-label="SanBong Cloud">
       <img src="/logo-icon.svg" alt="" width="28" height="28" decoding="async">
       <span>SanBong<em>.Cloud</em></span>
     </a>
@@ -50,12 +72,38 @@
 
   <main id="top">
 
+    <!-- 0 · PRIDE: layered floodlit pitch -->
+    <section id="hero" class="hero" data-sc-act="pin" data-sc-span="1.9" data-sc-drift="#060d18" aria-labelledby="hero-title">
+      <div data-sc-stage class="hero__stage">
+        <picture class="hero__plate">
+          <source media="(max-aspect-ratio: 4/5)" srcset="assets/hero/plate-m.webp" width="1080" height="1920">
+          <img src="assets/hero/plate.webp" alt="Sân bóng cỏ nhân tạo lúc chạng vạng, đèn pha vừa bật" width="2400" height="1350" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="hero__haze" aria-hidden="true"></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <h1 id="hero-title">Sân sáng đèn.<br>Lịch tự kín.</h1>
+          <p>Website đặt sân và app vận hành cho sân thể thao. Khách tự đặt online, bạn giữ quyền kiểm soát.</p>
+          <a class="hero__cta" href="#act-join">Tư vấn miễn phí</a>
+        </div>
+        <p class="hero__beat" aria-hidden="true">Tối nay, sân của bạn có kín lịch không?</p>
+
+        <div class="hero__ball" aria-hidden="true">
+          <span class="hero__contact"></span>
+          <img src="assets/hero/ball.webp" alt="" width="900" height="899" decoding="async">
+        </div>
+        <img class="hero__grass" src="assets/hero/grass.webp" alt="" width="2400" height="555" decoding="async" aria-hidden="true">
+        <div class="hero__floor" aria-hidden="true"></div>
+      </div>
+    </section>
+
     <!-- 1 · UNEASE: empty night board -->
     <section id="act-empty" data-sc-act="pin" data-sc-span="1.55" data-sc-drift="#060d18">
       <div data-sc-stage>
         <div class="surface">
           <div class="surface__bar">
-            <h1 class="surface__title">Lịch đặt sân · Tối nay</h1>
+            <h2 class="surface__title">Lịch đặt sân · Tối nay</h2>
             <p class="surface__meta">Thứ Bảy · 3 sân</p>
             <span class="surface__pill" id="empty-pill" data-state="wait">Chờ khách gọi</span>
           </div>
@@ -104,7 +152,7 @@
             <div class="board" data-board role="grid" aria-label="Bảng lịch giờ cao điểm"></div>
           </div>
           <p class="surface__toast" id="rush-toast">
-            <strong>Demo kịch bản</strong> — cuộn để đồng hồ đêm chạy và lịch tự lấp đầy.
+            <strong>Demo kịch bản.</strong> Cuộn để đồng hồ đêm chạy và lịch tự lấp đầy.
           </p>
         </div>
       </div>
@@ -120,39 +168,57 @@
             <p>Template và lịch đã tối ưu theo từng loại hình. Triển khai nhanh, gắn thương hiệu của bạn.</p>
           </div>
           <article class="venue">
-            <p class="venue__code">SB-01</p>
-            <h3>Bóng đá</h3>
-            <p>Sân 5, 7, 11. Đặt theo khung giờ, sân con và giải đấu.</p>
+            <img class="venue__img" src="assets/sports/football.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-football"/></svg>SB-01</p>
+              <h3>Bóng đá</h3>
+              <p>Sân 5, 7, 11. Đặt theo khung giờ, sân con và giải đấu.</p>
+            </div>
             <div class="venue__spec"><span>Slot</span><strong>60–90 phút</strong></div>
           </article>
           <article class="venue">
-            <p class="venue__code">PB-02</p>
-            <h3>Pickleball</h3>
-            <p>Theo giờ, combo thuê vợt, hội viên tháng.</p>
+            <img class="venue__img" src="assets/sports/pickleball.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-pickleball"/></svg>PB-02</p>
+              <h3>Pickleball</h3>
+              <p>Theo giờ, combo thuê vợt, hội viên tháng.</p>
+            </div>
             <div class="venue__spec"><span>Gói</span><strong>Drop-in / tháng</strong></div>
           </article>
           <article class="venue">
-            <p class="venue__code">BB-03</p>
-            <h3>Bóng rổ</h3>
-            <p>Trong nhà và ngoài trời. Theo sân hoặc full court.</p>
+            <img class="venue__img" src="assets/sports/basketball.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-basketball"/></svg>BB-03</p>
+              <h3>Bóng rổ</h3>
+              <p>Trong nhà và ngoài trời. Theo sân hoặc full court.</p>
+            </div>
             <div class="venue__spec"><span>Chế độ</span><strong>Half / Full</strong></div>
           </article>
           <article class="venue">
-            <p class="venue__code">TN-04</p>
-            <h3>Quần vợt</h3>
-            <p>Sân cứng, đất nện. Hội viên và khách vãng lai.</p>
+            <img class="venue__img" src="assets/sports/tennis.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-tennis"/></svg>TN-04</p>
+              <h3>Quần vợt</h3>
+              <p>Sân cứng, đất nện. Hội viên và khách vãng lai.</p>
+            </div>
             <div class="venue__spec"><span>Bề mặt</span><strong>Hard / Clay</strong></div>
           </article>
           <article class="venue">
-            <p class="venue__code">BD-05</p>
-            <h3>Cầu lông</h3>
-            <p>Slot 60–90 phút, quản lý dụng cụ cho thuê.</p>
+            <img class="venue__img" src="assets/sports/badminton.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-badminton"/></svg>BD-05</p>
+              <h3>Cầu lông</h3>
+              <p>Slot 60–90 phút, quản lý dụng cụ cho thuê.</p>
+            </div>
             <div class="venue__spec"><span>Thuê</span><strong>Vợt / cầu</strong></div>
           </article>
           <article class="venue">
-            <p class="venue__code">XX-06</p>
-            <h3>Môn khác</h3>
-            <p>Futsal, padel, bóng chuyền. Tùy biến theo yêu cầu.</p>
+            <img class="venue__img" src="assets/sports/other.jpg" alt="" width="720" height="960" decoding="async">
+            <div class="venue__top">
+              <p class="venue__code"><svg class="venue__icon" aria-hidden="true"><use href="#i-other"/></svg>XX-06</p>
+              <h3>Môn khác</h3>
+              <p>Futsal, padel, bóng chuyền. Tùy biến theo yêu cầu.</p>
+            </div>
             <div class="venue__spec"><span>Setup</span><strong>Custom</strong></div>
           </article>
           <p class="rail__end">Hết danh mục. Tiếp theo: bảng vận hành.</p>

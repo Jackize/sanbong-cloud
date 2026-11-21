@@ -13,6 +13,7 @@ services:
       - ./logo-icon.svg:/usr/share/nginx/html/logo-icon.svg:ro
       - ./logo.svg:/usr/share/nginx/html/logo.svg:ro
       - ./og-image.jpg:/usr/share/nginx/html/og-image.jpg:ro
+      - ./assets:/usr/share/nginx/html/assets:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
       - proxy
