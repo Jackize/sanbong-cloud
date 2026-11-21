@@ -104,7 +104,7 @@
         toastEl.innerHTML =
           "<strong>Trùng khung " +
           DEMO.hours[ev.hour] +
-          "</strong> — hệ thống giữ một suất, báo suất còn lại.";
+          ".</strong> Hệ thống giữ một suất, báo suất còn lại.";
       }
     } else if (ev.kind === "resolve") {
       el.classList.remove("is-conflict", "is-busy");
@@ -114,7 +114,7 @@
       em.textContent = "Đã xác nhận";
       if (toastEl) {
         toastEl.innerHTML =
-          "<strong>Xung đột đã xử lý</strong> — khách nhận SMS, suất trống mở lại cho Sân 2.";
+          "<strong>Xung đột đã xử lý.</strong> Khách nhận SMS, suất trống mở lại cho Sân 2.";
       }
       var free = slotEl(ev.hour, 1);
       if (free && !free.classList.contains("is-busy") && !free.classList.contains("is-mine")) {
@@ -164,7 +164,7 @@
 
     if (maxIdx < 0 && toastEl) {
       toastEl.innerHTML =
-        "<strong>Demo kịch bản</strong> — cuộn để đồng hồ đêm chạy và lịch tự lấp đầy.";
+        "<strong>Demo kịch bản.</strong> Cuộn để đồng hồ đêm chạy và lịch tự lấp đầy.";
     }
   }
 
@@ -204,6 +204,23 @@
     );
   }
 
+  // Hero cutouts stay hidden until every plane has decoded, so the plate never
+  // shows with a missing ball or grass strip.
+  var hero = document.getElementById("hero");
+  if (hero) {
+    var heroImgs = Array.prototype.slice.call(hero.querySelectorAll("img"));
+    Promise.all(
+      heroImgs.map(function (img) {
+        return img.decode ? img.decode() : Promise.resolve();
+      })
+    ).then(
+      function () {
+        hero.dataset.ready = "true";
+      },
+      function () {}
+    );
+  }
+
   // Chrome tab current section
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".app-chrome__tabs a"));
   var sections = tabs
@@ -215,7 +232,7 @@
 
   function updateTabs() {
     var y = window.scrollY + 120;
-    var current = sections[0];
+    var current = null;
     sections.forEach(function (sec) {
       if (sec.offsetTop <= y) current = sec;
     });

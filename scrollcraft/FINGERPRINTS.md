@@ -41,6 +41,7 @@ as a constraint, so writing them down is the whole point.
 
 - Live surface + app-chrome tab nav + Scroll Clock booking board (sanbong-cloud)
 - Act sequence pin→flow→pin→pan→flow→pin at ~12.5vh (not the 13.6–13.8 filmic band)
+- Rev 2 (same build, no new row): layered photographic hero, floodlit pitch at turf level, ball between copy and foreground grass, camera push + second-beat question. Sequence now pin→pin→flow→pin→pan→flow→pin at ~14.4vh
 
 ---
 

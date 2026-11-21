@@ -89,3 +89,32 @@ Premium-minimal operational: dark canvas, one emerald accent, Be Vietnam Pro (Vi
 | Commitment | `pin` (form stage) | Close is an actual input, not a magnet CTA |
 
 Checks: 4+ families (pin, flow/reveal, pan, count). No adjacent same family. Zero scrub. Peak span largest. Length shorter than filmic 13.6vh band (~9vh).
+
+---
+
+## Revision 2 (2026-11-21): layered hero
+
+**Self-authored under explicit creative delegation.** User chose: keep the existing structure, add a dimensional photographic hero, generate imagery with Cursor's image tool, "bạn quyết định hết". Reason: scroll-craft 0.3.1 makes a layered hero a baseline for a marketing page.
+
+**Hero scene:** a floodlit 7-a-side pitch at dusk, lens at turf level. Copy lives in the empty left sky.
+
+| Plane | Asset | Motion over the pinned span (1.9vh) |
+|---|---|---|
+| Plate | `assets/hero/plate.webp` / `plate-m.webp` (clean, no ball) | scale 1 → 1.07 about the horizon |
+| Haze | CSS band at the horizon | rises 3svh |
+| Copy (h1, sub, CTA) | real markup | fades + recedes p 0.08–0.38 |
+| Ball (subject) | `ball.webp`, true alpha (magenta key) | scale 1 → 1.22 from its contact point, drops 2svh |
+| Grass (foreground) | `grass.webp`, solid below silhouette | rises 9svh, overtakes the ball's base |
+| Beat 2 | "Tối nay, sân của bạn có kín lịch không?" | fades in p 0.42–0.64, stays crisp while the scene fades to canvas |
+
+Contact anchor: horizon maths (a ~22cm ball from a ~15cm-high lens straddles the horizon at 68% of its height); grass always covers the base.
+
+**Feeling curve, updated:** Pride (your pitch, lit, the promise) → Unease (empty board) → Relief → Awe (peak, unchanged) → Appetite → Confidence → Resolve. The hero is quieter than the peak by design.
+
+**Authored silence:** p ≈ 0.38–0.42 in the hero, image only, between the promise and the question.
+
+**Mobile:** separate portrait plate, copy above the subject, larger ball, taller grass band.
+
+**Reduced motion:** hero collapses to one static viewport, no beat 2, all layers present.
+
+Asset pipeline: `hero-src/` holds the generated originals and `process.py` (key, despill, grade, export WebP). Run with a Python that has Pillow + numpy.
